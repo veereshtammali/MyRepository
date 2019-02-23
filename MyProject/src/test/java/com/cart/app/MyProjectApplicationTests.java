@@ -11,7 +11,8 @@ public class MyProjectApplicationTests {
 
 	@Test
 	public void contextLoads() {
-		System.out.println("TAGGGGG");
+
+		System.out.println("TEST CASES FROM GIT TERMINAL....");
 	}
 
 }
