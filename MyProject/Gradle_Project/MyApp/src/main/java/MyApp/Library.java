@@ -5,6 +5,7 @@ package MyApp;
 
 public class Library {
     public boolean someLibraryMethod() {
+        //data
         return true;
     }
 }
