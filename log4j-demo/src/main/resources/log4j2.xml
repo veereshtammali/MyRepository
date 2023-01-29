@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO" packages="com.logging">
+<Configuration status="INFO" packages="com.masking">
     <!-- Logging Properties -->
     <Properties>
-        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %X{conversationID} [%p] - %c{1} - %m%n</Property>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} %X{conversationID} [%p] - %c{1} - %m %maskPhone %n</Property>
         <Property name="APP_LOG_ROOT">D:/app/log4j/logs</Property>
     </Properties>
     <Appenders>

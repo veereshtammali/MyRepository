@@ -15,7 +15,7 @@ class HelloController {
 	public ResponseEntity<String>  getAppName() {
 		
 		String appName = "MyApp";
-		log.info(appName);
+		log.info(appName+" 1234567890123456");
 		log.error("ERROR---");
 		log.debug("DEBUG");
 		log.warn("WARN");
