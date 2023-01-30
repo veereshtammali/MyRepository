@@ -11,11 +11,10 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 
 @Component
-@Order(2)
+@Order(3)
 @Slf4j
 @WebFilter
 public class TransactionFilter3 implements Filter {
@@ -24,10 +23,9 @@ public class TransactionFilter3 implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 
-		HttpServletRequest req = (HttpServletRequest) request;
-		log.info("Filter2 -- started");
+		log.info("Filter3 -- started");
 		chain.doFilter(request, response);
 
-		log.info("Filter2 -- end");
+		log.info("Filter3 -- end");
 	}
 }

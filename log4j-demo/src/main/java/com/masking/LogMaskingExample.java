@@ -10,26 +10,28 @@ import org.apache.logging.log4j.core.pattern.LogEventPatternConverter;
 import org.apache.logging.log4j.core.pattern.PatternConverter;
 
 @Plugin(name = "logMask", category = PatternConverter.CATEGORY)
-@ConverterKeys({"maskPhone"})
+@ConverterKeys({ "maskPhone" })
 public class LogMaskingExample extends LogEventPatternConverter {
-static final String MASKPHONE="$1*******$2";
-final Pattern logPattern = Pattern.compile("dummy");
+	static final String MASKPHONE = "$1*******$2";
+	final Pattern logPattern = Pattern
+			.compile("dummy");
 
 	protected LogMaskingExample(String name, String style) {
 		super(name, style);
-		// TODO Auto-generated constructor stub
 	}
-public static LogMaskingExample newInstance() {
-	return new LogMaskingExample("query",Thread.currentThread().getName());
-}
+
+	public static LogMaskingExample newInstance() {
+		return new LogMaskingExample("query", Thread.currentThread().getName());
+	}
+
 	@Override
 	public void format(LogEvent event, StringBuilder toAppendTo) {
-		String msg  = toAppendTo.toString();
+		String msg = toAppendTo.toString();
 		Matcher pmatcher = logPattern.matcher(msg);
-		if(pmatcher.find()) {
+		if (pmatcher.find()) {
 			msg = pmatcher.replaceAll(MASKPHONE);
 		}
-		toAppendTo.replace(0, toAppendTo.toString().length()-1, msg+"hiii");
+		toAppendTo.replace(0, toAppendTo.toString().length() - 1, msg + "hiii");
 	}
 
 }

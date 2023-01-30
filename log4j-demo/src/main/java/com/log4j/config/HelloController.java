@@ -10,16 +10,16 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Controller
 class HelloController {
-	
+
 	@GetMapping("/getAppName")
-	public ResponseEntity<String>  getAppName() {
-		
+	public ResponseEntity<String> getAppName() {
+
 		String appName = "MyApp";
-		log.info(appName+" 1234567890123456");
+		log.info(appName + " 1234567890123456");
 		log.error("ERROR---");
 		log.debug("DEBUG");
 		log.warn("WARN");
-		 return new ResponseEntity<String>(appName, HttpStatus.OK);
+		return new ResponseEntity<String>(appName, HttpStatus.OK);
 	}
 
 }
