@@ -31,7 +31,7 @@ public class LogMaskingExample extends LogEventPatternConverter {
 		if (pmatcher.find()) {
 			msg = pmatcher.replaceAll(MASKPHONE);
 		}
-		toAppendTo.replace(0, toAppendTo.toString().length() - 1, msg + "hiii");
+		toAppendTo.replace(0, toAppendTo.toString().length() - 1, msg);
 	}
 
 }

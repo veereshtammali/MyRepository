@@ -25,7 +25,6 @@ public class TransactionFilter3 implements Filter {
 
 		log.info("Filter3 -- started");
 		chain.doFilter(request, response);
-
 		log.info("Filter3 -- end");
 	}
 }

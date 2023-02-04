@@ -16,9 +16,9 @@ class HelloController {
 
 		String appName = "MyApp";
 		log.info(appName + " 1234567890123456");
-		log.error("ERROR---");
-		log.debug("DEBUG");
-		log.warn("WARN");
+		log.error("This is ERROR log");
+		log.debug("This is DEBUG log");
+		log.warn("This is WARN log");
 		return new ResponseEntity<String>(appName, HttpStatus.OK);
 	}
 

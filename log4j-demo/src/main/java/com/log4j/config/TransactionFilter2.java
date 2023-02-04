@@ -23,7 +23,6 @@ public class TransactionFilter2 implements Filter {
 
 		log.info("Filter2 -- started");
 		chain.doFilter(request, response);
-
 		log.info("Filter2 -- end");
 	}
 }

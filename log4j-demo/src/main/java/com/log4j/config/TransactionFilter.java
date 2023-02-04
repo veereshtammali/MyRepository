@@ -26,7 +26,6 @@ public class TransactionFilter implements Filter {
 		MDC.put("conversationID", UUID.randomUUID().toString());
 		log.info("Filter1 -- started");
 		chain.doFilter(request, response);
-
 		log.info("Filter1 -- end");
 	}
 }
